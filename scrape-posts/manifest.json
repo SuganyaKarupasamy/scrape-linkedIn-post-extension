@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "LinkedIn Saved Posts Scraper",
+  "version": "1.0",
+  "description": "Scrape LinkedIn saved posts and download as CSV",
+  "permissions": [
+    "activeTab",
+    "https://www.linkedin.com/*"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
